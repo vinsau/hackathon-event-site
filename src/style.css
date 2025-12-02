@@ -1417,10 +1417,11 @@ input, select, textarea {
 
 @media (max-width: 768px) {
   :root {
-    --section-padding: 64px;
-    --container-padding: 20px;
+    --section-padding: 60px;
+    --container-padding: 16px;
   }
   
+  /* Navigation */
   .nav-links {
     position: fixed;
     top: 0;
@@ -1444,6 +1445,7 @@ input, select, textarea {
   .nav-links .btn {
     margin-left: 0;
     margin-top: 24px;
+    color: #ffffff;
   }
   
   .nav-toggle {
@@ -1463,102 +1465,549 @@ input, select, textarea {
     transform: rotate(-45deg) translate(5px, -5px);
   }
   
+  /* Hero Section */
+  .hero {
+    padding: 100px var(--container-padding) 60px;
+    min-height: auto;
+  }
+  
+  .hero-badge {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    margin-bottom: 24px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 32px;
+    padding: 0 8px;
+  }
+  
   .hero-stats {
-    flex-direction: column;
-    gap: 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 40px;
+    margin-bottom: 32px;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
   }
   
   .hero-cta {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
   }
   
   .countdown {
     flex-wrap: wrap;
-    gap: 12px;
-    padding: 20px;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px 16px;
+    margin: 0 8px;
+  }
+  
+  .countdown-item {
+    min-width: 60px;
   }
   
   .countdown-value {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+  
+  .countdown-label {
+    font-size: 0.65rem;
   }
   
   .countdown-separator {
     display: none;
   }
   
+  /* Section Headers */
+  .section-header {
+    margin-bottom: 40px;
+  }
+  
+  .section-tag {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  /* About Section */
+  .about-grid {
+    gap: 32px;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  
+  .about-features {
+    margin-top: 24px;
+    gap: 20px;
+  }
+  
+  .feature-icon {
+    font-size: 1.5rem;
+  }
+  
+  .feature-content h4 {
+    font-size: 1rem;
+  }
+  
+  .feature-content p {
+    font-size: 0.9rem;
+  }
+  
+  .code-window {
+    border-radius: var(--radius-md);
+  }
+  
+  .code-header {
+    padding: 12px 16px;
+  }
+  
+  .code-content {
+    padding: 16px;
+    font-size: 0.75rem;
+  }
+  
+  /* Schedule Section */
   .schedule-tabs {
     flex-direction: column;
     align-items: stretch;
+    gap: 8px;
+    margin-bottom: 32px;
   }
   
   .tab-btn {
     text-align: center;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .timeline {
+    padding: 0 8px;
   }
   
   .timeline-item {
     flex-direction: column;
     gap: 8px;
+    padding: 20px 0;
   }
   
   .timeline-time {
     width: auto;
+    font-size: 0.85rem;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+  
+  .timeline-content.highlight {
+    padding: 14px 16px;
+  }
+  
+  /* Tracks Section */
+  .tracks-carousel {
+    margin: 0 -8px;
+  }
+  
+  .carousel-container {
+    margin: 0;
+    padding: 0 8px;
+  }
+  
+  .carousel-track {
+    gap: 16px;
+    padding: 8px;
   }
   
   .track-card {
     flex: 0 0 100%;
     min-width: unset;
+    padding: 24px;
+  }
+  
+  .track-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+  
+  .track-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+  
+  .track-card p {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+  
+  .track-tags {
+    gap: 6px;
+  }
+  
+  .track-tags li {
+    padding: 5px 12px;
+    font-size: 0.75rem;
+  }
+  
+  .carousel-controls {
+    margin-top: 24px;
+    gap: 16px;
+  }
+  
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Prizes Section */
+  .prizes-grid {
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .prize-card {
+    padding: 28px 24px;
+  }
+  
+  .prize-first {
+    padding: 36px 24px;
+  }
+  
+  .prize-crown {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .prize-place {
+    font-size: 1rem;
+  }
+  
+  .prize-amount {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+  
+  .prize-first .prize-amount {
+    font-size: 2.2rem;
+  }
+  
+  .prize-extras span {
+    font-size: 0.85rem;
+  }
+  
+  .special-prizes h3 {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
   }
   
   .special-prizes-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .special-prize {
+    padding: 20px 16px;
+    gap: 10px;
+  }
+  
+  .special-icon {
+    font-size: 1.5rem;
+  }
+  
+  .special-name {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  
+  .special-amount {
+    font-size: 1.1rem;
+  }
+  
+  /* Sponsors Section */
+  .sponsors-tiers {
+    gap: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .tier-name {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
   }
   
   .sponsor-logos {
     flex-direction: column;
+    gap: 12px;
   }
   
+  .sponsor-logo {
+    width: 100%;
+    padding: 20px 24px;
+    font-size: 1.1rem;
+  }
+  
+  .tier-platinum .sponsor-logo {
+    padding: 24px 32px;
+    font-size: 1.25rem;
+  }
+  
+  .tier-gold .sponsor-logo {
+    padding: 22px 28px;
+    font-size: 1.15rem;
+  }
+  
+  .become-sponsor {
+    padding: 32px 24px;
+  }
+  
+  .become-sponsor p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  
+  /* FAQ Section */
+  .faq-grid {
+    gap: 12px;
+  }
+  
+  .faq-question {
+    padding: 18px 16px;
+    font-size: 0.95rem;
+    gap: 12px;
+  }
+  
+  .faq-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+  
+  .faq-answer p {
+    padding: 0 16px 18px;
+    font-size: 0.9rem;
+  }
+  
+  /* Register Section */
   .register-wrapper {
-    padding: 32px;
+    padding: 28px 20px;
+    gap: 32px;
+    border-radius: var(--radius-lg);
   }
   
   .register-content .section-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  
+  .register-content .section-tag {
+    display: block;
+    text-align: center;
+  }
+  
+  .register-content p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .register-form {
+    gap: 16px;
+  }
+  
+  .form-group label {
+    font-size: 0.85rem;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+  
+  .form-checkbox {
+    gap: 10px;
+  }
+  
+  .form-checkbox label {
+    font-size: 0.85rem;
+  }
+  
+  .form-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 48px 0 24px;
   }
   
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+    text-align: center;
+  }
+  
+  .footer-brand .logo {
+    justify-content: center;
+  }
+  
+  .footer-brand p {
+    font-size: 0.9rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+  
+  .footer-links ul,
+  .footer-contact ul {
+    gap: 10px;
+  }
+  
+  .footer-links a,
+  .footer-contact li {
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom {
+    padding-top: 24px;
+    margin-top: 8px;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
+  :root {
+    --section-padding: 48px;
+    --container-padding: 14px;
+  }
+  
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .hero-stats {
+    gap: 20px 32px;
   }
   
   .stat-number {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .countdown {
+    padding: 16px 12px;
+  }
+  
+  .countdown-item {
+    min-width: 50px;
+  }
+  
+  .countdown-value {
+    font-size: 1.4rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
   }
   
   .btn-large {
-    padding: 14px 28px;
-    font-size: 1rem;
+    padding: 14px 24px;
+    font-size: 0.95rem;
   }
   
   .code-content {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    padding: 12px;
+  }
+  
+  .special-prizes-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .special-prize {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  
+  .special-prize .special-icon {
+    order: 0;
+  }
+  
+  .special-prize .special-name {
+    order: 1;
+    flex: 1;
+    text-align: left;
+    margin-left: 12px;
+  }
+  
+  .special-prize .special-amount {
+    order: 2;
   }
   
   .prize-amount {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   
   .prize-first .prize-amount {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  
+  .register-wrapper {
+    padding: 24px 16px;
+  }
+  
+  .register-content .section-title {
+    font-size: 1.5rem;
   }
 }
