@@ -46,8 +46,8 @@ navLinks.querySelectorAll('a').forEach(link => {
 
 // ===== Countdown Timer =====
 function updateCountdown() {
-  // Set the event date - March 15, 2025
-  const eventDate = new Date('March 15, 2025 09:00:00').getTime();
+  // Set the event date - December 25, 2025
+  const eventDate = new Date('December 25, 2025 09:00:00').getTime();
   const now = new Date().getTime();
   const distance = eventDate - now;
   
